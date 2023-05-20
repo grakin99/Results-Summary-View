@@ -1,7 +1,97 @@
+// Resets
+
+*::after,
+*::before,
+* {
+  all: revert;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  font-family: "Hanken Grotesk";
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: 100svh;
+}
+
+// Imports
+@import "colours";
+@import "fonts";
+
+// Styles
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+section.results {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  width: 100%;
+  // fallback for browsers that do not support svh units
+  height: 45vh;
+  height: 45svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom-left-radius: 3.5rem;
+  border-bottom-right-radius: 3.5rem;
+  @media screen and (min-width: 1440px) {
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  div.result-container {
+    border-radius: 50%;
+    width: 20%;
+    height: auto;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    background-image: linear-gradient(
+      hsla(256, 72%, 46%, 1),
+      hsla(241, 72%, 46%, 0)
+    );
+    p.result {
+    }
+    p.max {
+    }
+  }
+
+  h2.quality {
+  }
+  p.result-description {
+  }
+}
+
+section.summary {
+  ul.summary-list {
+    li {
+      p.summary-section {
+      }
+      p.summary-result {
+      }
+    }
+  }
+  button.continue-button {
+  }
+}
+
+.attribution {
 }
